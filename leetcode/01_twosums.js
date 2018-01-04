@@ -35,9 +35,13 @@ let twoSums_hash = function(nums, target){
     for(let i = 0; i < nums.length; i++){
         let complement = target - nums[i];
         console.log("complement:", complement)
+
         if (hash.hasOwnProperty(complement) && hash.get(complement) !== i) {
+            console.log("inside the conditional")
             let result = [];
-            result.push[i, hash.get(complement)];
+            console.log("i: ", i)
+            console.log("complement: ", complement)
+            result.push(nums[i], complement);
             console.log("result: ", result)
             return result;
         }
